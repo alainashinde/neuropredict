@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <br/>
+    <br/>
+    <div class="container">
+        <header>
+            <h1>Prediction Result</h1>
+        </header>
+        <main>
+            <div class="result">
+                <h2>ADHD Prediction: {{ prediction }}</h2>
+                <br/>
+                <p><strong>Confidence Score:</strong> {{ confidence }}%</p>
+            </div>
+            <br/>
+            <div class="disclaimer">
+                <p><strong>Disclaimer:</strong></p>
+                <p>
+                    The results provided by this tool are intended for informational purposes only. 
+                    They should not be used as a substitute for professional medical advice, diagnosis, or treatment. 
+                    Always seek the advice of your physician or other qualified health provider with any questions 
+                    you may have regarding a medical condition. This tool is designed to assist in the understanding 
+                    of ADHD comorbidity in the context of autism spectrum disorder, but it should not be relied upon 
+                    as the sole basis for any clinical decision.
+                </p>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

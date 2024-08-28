@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeuroPredict - Home</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            text-align: center;
+            background-color: #f0f8ff;
+            color: #333;
+        }
+        .container {
+            margin: 50px auto;
+            padding: 20px;
+            max-width: 600px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            background-color: #fff;
+        }
+        h1 {
+            color: #4682b4;
+        }
+        h2 {
+            color: #315a8e;
+        }
+        p {
+            text-align: left;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 20px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #4682b4;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+        .button:hover {
+            background-color: #315a8e;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to NeuroPredict!</h1>
+        <p>Discover how our model can help in predicting ADHD comorbidities in patients with autism based on SRS test scores.</p>
+        
+        <h2>Understanding ASD and ADHD Comorbidities</h2>
+        <p>Autism spectrum disorder (ASD) and Attention-Deficit/Hyperactivity Disorder (ADHD) are both complex neurodevelopmental disorders that significantly impact children's lives. ASD, affecting 1 in 59 children globally, is characterized by challenges in social communication and repetitive behaviors. ADHD, affecting 1 in 20 children, is marked by inattention, disorganization, and hyperactivity. The intersection of these two disorders presents unique challenges in diagnosis and treatment, as the symptoms of ASD often overshadow those of ADHD, leading to delays in diagnosis and incomplete treatment plans.</p>
+        
+        <p>Recent studies have shown that over 50% of individuals with ASD also display symptoms of ADHD. However, due to the overlapping nature of these disorders, especially in children, diagnosing them accurately and promptly remains a significant challenge. Delays in diagnosing ADHD in children with ASD can be as long as five years, which can lead to inadequate treatment and support.</p>
+
+        <h2>The Role of Machine Learning in Accurate Diagnosis</h2>
+        <p>This is where our work at NeuroPredict comes in. By utilizing advanced machine learning models, we aim to analyze complex phenotypic datasets to differentiate between ASD, ADHD, and their comorbidities. Our model leverages Social Responsiveness Scale (SRS) test scores, widely recognized for their reliability in assessing social behavior, communication skills, and adaptive functioning. The SRS is particularly effective in detecting subtle social impairments, making it a valuable tool for identifying children at risk for ASD and ADHD comorbidities.</p>
+
+        <p>By combining clinical observations with neuropsychological assessments like the SRS, our machine learning model offers a more nuanced approach to diagnosis, helping clinicians and researchers make informed decisions faster and with greater confidence.</p>
+        
+        <a href="/predict-form" class="button">Click here to try a demo of the app!</a>
+        <a href="{{ url_for('login') }}" class="button">Login/Sign Up</a>
+
+    </div>
+</body>
+</html>

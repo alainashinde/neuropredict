@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADHD Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+</head>
+<body>
+    <br/>
+    <br/>
+    <div class="container">
+        <header>
+            <h1>ADHD Prediction</h1>
+        </header>
+        <main>
+            <form action="/predict" method="post">
+                <div class="form-group">
+                    <label for="SRS_RAW_TOTAL">SRS_RAW_TOTAL:</label>
+                    <input type="text" id="SRS_RAW_TOTAL" name="SRS_RAW_TOTAL" required>
+                </div>
+                <div class="form-group">
+                    <label for="SRS_AWARENESS">SRS_AWARENESS:</label>
+                    <input type="text" id="SRS_AWARENESS" name="SRS_AWARENESS" required>
+                </div>
+                <div class="form-group">
+                    <label for="SRS_COGNITION">SRS_COGNITION:</label>
+                    <input type="text" id="SRS_COGNITION" name="SRS_COGNITION" required>
+                </div>
+                <div class="form-group">
+                    <label for="SRS_COMMUNICATION">SRS_COMMUNICATION:</label>
+                    <input type="text" id="SRS_COMMUNICATION" name="SRS_COMMUNICATION" required>
+                </div>
+                <div class="form-group">
+                    <label for="SRS_MOTIVATION">SRS_MOTIVATION:</label>
+                    <input type="text" id="SRS_MOTIVATION" name="SRS_MOTIVATION" required>
+                </div>
+                <div class="form-group">
+                    <label for="SRS_MANNERISMS">SRS_MANNERISMS:</label>
+                    <input type="text" id="SRS_MANNERISMS" name="SRS_MANNERISMS" required>
+                </div>
+                <button type="submit">Predict ADHD</button>
+            </form>
+        </main>
+    </div>
+</body>
+</html>
