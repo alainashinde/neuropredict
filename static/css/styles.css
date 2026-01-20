@@ -1,11 +1,11 @@
-/* Basic reset and box-sizing */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Apply the custom font */
+
 body {
     font-family: 'Roboto', sans-serif;
     background-color: #f9f9f9;
