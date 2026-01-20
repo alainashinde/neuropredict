@@ -13,7 +13,7 @@ bcrypt = Bcrypt(app)
 login_manager = LoginManager(app)
 login_manager.login_view = 'login'
 
-# Load the trained model
+# load trained model
 model = joblib.load('best_svm_model.pkl')
 
 class User(db.Model, UserMixin):
@@ -39,7 +39,7 @@ def predict_form():
 @login_required
 def predict():
     try:
-        # Get input values from form
+        # input values from form
         srs_raw_total = float(request.form['SRS_RAW_TOTAL'])
         srs_awareness = float(request.form['SRS_AWARENESS'])
         srs_cognition = float(request.form['SRS_COGNITION'])
@@ -47,14 +47,14 @@ def predict():
         srs_motivation = float(request.form['SRS_MOTIVATION'])
         srs_mannerisms = float(request.form['SRS_MANNERISMS'])
 
-        # Prepare the input array for prediction
+        # prep input array for prediction
         input_data = np.array([[srs_raw_total, srs_awareness, srs_cognition, srs_communication, srs_motivation, srs_mannerisms]])
 
-        # Make prediction
+        # make prediction
         prediction = model.predict(input_data)[0]
         confidence = model.predict_proba(input_data)[0]
 
-        # Convert the output to a more readable format
+        # output in readable format
         adhd_prediction = 'True' if prediction == 1 else 'False'
         confidence_score = confidence[prediction] * 100
 
